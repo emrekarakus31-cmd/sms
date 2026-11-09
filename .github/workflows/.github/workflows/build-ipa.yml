@@ -1,0 +1,58 @@
+name: NOVA SMS Shield AI - iOS IPA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-unsigned-ipa:
+    name: iOS unsigned IPA
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - name: Get project
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Build for iPhone (unsigned)
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project NOVA-SMS-Shield-AI.xcodeproj \
+            -scheme NOVASMSShieldAI \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/DerivedData" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            build
+
+      - name: Check extension and package IPA
+        shell: bash
+        run: |
+          set -euo pipefail
+          APP_PATH="$RUNNER_TEMP/DerivedData/Build/Products/Release-iphoneos/NOVASMSShieldAI.app"
+          test -d "$APP_PATH"
+          test -f "$APP_PATH/NOVASMSShieldAI"
+          test -d "$APP_PATH/PlugIns/MessageFilter.appex"
+          test -f "$APP_PATH/PlugIns/MessageFilter.appex/MessageFilter"
+          test -f "$APP_PATH/sms_model.json"
+          test -f "$APP_PATH/PlugIns/MessageFilter.appex/sms_model.json"
+          mkdir -p "$RUNNER_TEMP/ipa/Payload" output
+          ditto "$APP_PATH" "$RUNNER_TEMP/ipa/Payload/NOVASMSShieldAI.app"
+          (cd "$RUNNER_TEMP/ipa" && zip -q -r "$GITHUB_WORKSPACE/output/NOVA-SMS-Shield-AI-unsigned.ipa" Payload)
+          echo 'Unsigned IPA generated. Sideloadly must sign it for the device.'
+
+      - name: Downloadable IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: NOVA-SMS-Shield-AI-unsigned-IPA
+          path: output/NOVA-SMS-Shield-AI-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 7
