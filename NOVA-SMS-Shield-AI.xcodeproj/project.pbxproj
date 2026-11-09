@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		D1FB402F1269BA7396DCA9CB /* PROJECT */ = {
+			isa = PBXProject;
+			attributes = { LastUpgradeCheck = 1600; TargetAttributes = { 9D0B475AA52BF9E5351B1295 = { CreatedOnToolsVersion = 16.0; }; 2C5E188001E5FE3D33A3D7C4 = { CreatedOnToolsVersion = 16.0; }; }; };
+			buildConfigurationList = D93B74D091CA7426B0D60A81 /* PROJ_CONFIG_LIST */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = tr;
+			hasScannedForEncodings = 0;
+			knownRegions = (tr, en, Base,);
+			mainGroup = 68032A9EA3DCFBB5F622253A /* ROOT_GROUP */;
+			productRefGroup = CD0C711E71CA10B3BCCE752A /* PRODUCT_GROUP */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D0B475AA52BF9E5351B1295 /* TARGET_APP */,
+				2C5E188001E5FE3D33A3D7C4 /* TARGET_EXT */,
+			);
+		};
+		68032A9EA3DCFBB5F622253A /* ROOT_GROUP */ = {
+			isa = PBXGroup;
+			children = (
+				5C929680C2FCD90B6747114D /* GROUP_APP */,
+				3C7EB52743FE761A39B38AA0 /* GROUP_EXT */,
+				316DB0BF29DFA68734E97FC4 /* GROUP_SHARED */,
+				65E00661EE02A5FA0C1E0101 /* GROUP_TOOLS */,
+				CD0C711E71CA10B3BCCE752A /* PRODUCT_GROUP */,
+			);
+			sourceTree = "<group>";
+		};
+		5C929680C2FCD90B6747114D /* GROUP_APP */ = {
+			isa = PBXGroup;
+			children = (
+				39CC2BC8A2268BD2F04C5D4F /* FILE_APP */,
+				22DB63615F20D5F05BC54E69 /* FILE_CONTENT */,
+				7FE26358EBEC112E01B77B67 /* FILE_APP_PLIST */,
+			);
+			path = "NOVA-SMS-Shield-AI";
+			sourceTree = "<group>";
+		};
+		3C7EB52743FE761A39B38AA0 /* GROUP_EXT */ = {
+			isa = PBXGroup;
+			children = (
+				97232967FA150619EACE6F64 /* FILE_EXT */,
+				D3CBBEE99D496E7E5EEEF24A /* FILE_EXT_PLIST */,
+			);
+			path = MessageFilter;
+			sourceTree = "<group>";
+		};
+		316DB0BF29DFA68734E97FC4 /* GROUP_SHARED */ = {
+			isa = PBXGroup;
+			children = (
+				53CD33DA6F8BD2FD82CE83F3 /* FILE_ANALYZER */,
+				18F7B10A07203FB6E908EB45 /* FILE_MODEL */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		65E00661EE02A5FA0C1E0101 /* GROUP_TOOLS */ = {
+			isa = PBXGroup;
+			children = (
+				A085BF3EA91884BED652845D /* FILE_TRAIN */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		CD0C711E71CA10B3BCCE752A /* PRODUCT_GROUP */ = {
+			isa = PBXGroup;
+			children = (
+				F2D9E7050F273CF60CF38654 /* PRODUCT_APP */,
+				2D8D4696537F7A75C20E4F35 /* PRODUCT_EXT */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39CC2BC8A2268BD2F04C5D4F /* FILE_APP */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = "NOVASMSShieldAIApp.swift";
+			sourceTree = "<group>";
+		};
+		22DB63615F20D5F05BC54E69 /* FILE_CONTENT */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = "ContentView.swift";
+			sourceTree = "<group>";
+		};
+		7FE26358EBEC112E01B77B67 /* FILE_APP_PLIST */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = "Info.plist";
+			sourceTree = "<group>";
+		};
+		97232967FA150619EACE6F64 /* FILE_EXT */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = "MessageFilterExtension.swift";
+			sourceTree = "<group>";
+		};
+		D3CBBEE99D496E7E5EEEF24A /* FILE_EXT_PLIST */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = "Info.plist";
+			sourceTree = "<group>";
+		};
+		53CD33DA6F8BD2FD82CE83F3 /* FILE_ANALYZER */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = "SMSAnalyzer.swift";
+			sourceTree = "<group>";
+		};
+		18F7B10A07203FB6E908EB45 /* FILE_MODEL */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.json;
+			path = "sms_model.json";
+			sourceTree = "<group>";
+		};
+		A085BF3EA91884BED652845D /* FILE_TRAIN */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.script.python;
+			path = "train_model.py";
+			sourceTree = "<group>";
+		};
+		F2D9E7050F273CF60CF38654 /* PRODUCT_APP */ = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = NOVASMSShieldAI.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D8D4696537F7A75C20E4F35 /* PRODUCT_EXT */ = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.app-extension;
+			includeInIndex = 0;
+			path = MessageFilter.appex;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		964484E0FE67DF3537DD3CC7 /* BUILD_APP */ = {
+			isa = PBXBuildFile;
+			fileRef = 39CC2BC8A2268BD2F04C5D4F /* FILE_APP */;
+		};
+		65D8967736FE65746118B32C /* BUILD_CONTENT */ = {
+			isa = PBXBuildFile;
+			fileRef = 22DB63615F20D5F05BC54E69 /* FILE_CONTENT */;
+		};
+		C1D51917BE5354D6B3B4B82A /* BUILD_SHARED_APP */ = {
+			isa = PBXBuildFile;
+			fileRef = 53CD33DA6F8BD2FD82CE83F3 /* FILE_ANALYZER */;
+		};
+		73250EEF9C708AE41825430B /* BUILD_MODEL_APP */ = {
+			isa = PBXBuildFile;
+			fileRef = 18F7B10A07203FB6E908EB45 /* FILE_MODEL */;
+		};
+		9C0CBC48001810474C073594 /* BUILD_EXT */ = {
+			isa = PBXBuildFile;
+			fileRef = 97232967FA150619EACE6F64 /* FILE_EXT */;
+		};
+		67C17AD6DB4D07266E8CDC46 /* BUILD_SHARED_EXT */ = {
+			isa = PBXBuildFile;
+			fileRef = 53CD33DA6F8BD2FD82CE83F3 /* FILE_ANALYZER */;
+		};
+		D27CCA2D1CEDECEEF6BF1CF3 /* BUILD_MODEL_EXT */ = {
+			isa = PBXBuildFile;
+			fileRef = 18F7B10A07203FB6E908EB45 /* FILE_MODEL */;
+		};
+		18E555082C675A48D8E121FB /* BUILD_EMBED_EXT */ = {
+			isa = PBXBuildFile;
+			fileRef = 2D8D4696537F7A75C20E4F35 /* PRODUCT_EXT */;
+			settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); };
+		};
+		0C7725DF761CC36B60B22386 /* APP_SOURCES */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				964484E0FE67DF3537DD3CC7 /* BUILD_APP */,
+				65D8967736FE65746118B32C /* BUILD_CONTENT */,
+				C1D51917BE5354D6B3B4B82A /* BUILD_SHARED_APP */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C0A6360F66C2AA3E639509B /* EXT_SOURCES */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C0CBC48001810474C073594 /* BUILD_EXT */,
+				67C17AD6DB4D07266E8CDC46 /* BUILD_SHARED_EXT */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82B2811BC33924A87ACE6DB2 /* APP_RESOURCES */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73250EEF9C708AE41825430B /* BUILD_MODEL_APP */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB7DCF8169F11FFA2BB9E6A7 /* EXT_RESOURCES */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D27CCA2D1CEDECEEF6BF1CF3 /* BUILD_MODEL_EXT */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		723E44E934687D1244AFF0E9 /* APP_FRAMEWORKS */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7190A8C7ACC11068D975891A /* EXT_FRAMEWORKS */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		270FFCD0B2E019B7E688954A /* APP_EMBED */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				18E555082C675A48D8E121FB /* BUILD_EMBED_EXT */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C4234C6043B0E84BA98DBC7 /* EXT_PROXY */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1FB402F1269BA7396DCA9CB /* PROJECT */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C5E188001E5FE3D33A3D7C4;
+			remoteInfo = MessageFilter;
+		};
+		FC58B8C2F86D5C13B6ABDF5F /* EXT_DEPENDENCY */ = {
+			isa = PBXTargetDependency;
+			target = 2C5E188001E5FE3D33A3D7C4 /* TARGET_EXT */;
+			targetProxy = 2C4234C6043B0E84BA98DBC7 /* EXT_PROXY */;
+		};
+		9D0B475AA52BF9E5351B1295 /* TARGET_APP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FE2731BD57B18A61710FADA /* APP_CONFIG_LIST */;
+			buildPhases = (
+				0C7725DF761CC36B60B22386 /* APP_SOURCES */,
+				723E44E934687D1244AFF0E9 /* APP_FRAMEWORKS */,
+				82B2811BC33924A87ACE6DB2 /* APP_RESOURCES */,
+				270FFCD0B2E019B7E688954A /* APP_EMBED */,
+			);
+			buildRules = ();
+			dependencies = (
+				FC58B8C2F86D5C13B6ABDF5F /* EXT_DEPENDENCY */,
+			);
+			name = NOVASMSShieldAI;
+			productName = NOVASMSShieldAI;
+			productReference = F2D9E7050F273CF60CF38654 /* PRODUCT_APP */;
+			productType = "com.apple.product-type.application";
+		};
+		2C5E188001E5FE3D33A3D7C4 /* TARGET_EXT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2623B63FA43A0763974E28D1 /* EXT_CONFIG_LIST */;
+			buildPhases = (
+				5C0A6360F66C2AA3E639509B /* EXT_SOURCES */,
+				7190A8C7ACC11068D975891A /* EXT_FRAMEWORKS */,
+				DB7DCF8169F11FFA2BB9E6A7 /* EXT_RESOURCES */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = MessageFilter;
+			productName = MessageFilter;
+			productReference = 2D8D4696537F7A75C20E4F35 /* PRODUCT_EXT */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		5C18D2B0477B530131D0AE8B /* PROJ_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+			};
+			name = Debug;
+		};
+		753EE9967FB626F8D493CFD7 /* APP_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "NOVA-SMS-Shield-AI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.NOVASMSShieldAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		44267F12006D299660C2078A /* EXT_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MessageFilter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.NOVASMSShieldAI.MessageFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2576405B7A5E7166A8F97D71 /* PROJ_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+			};
+			name = Release;
+		};
+		30FE79FEE89AE58799512516 /* APP_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "NOVA-SMS-Shield-AI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.NOVASMSShieldAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CE3348A7EA592EDC09F767B7 /* EXT_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MessageFilter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.NOVASMSShieldAI.MessageFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D93B74D091CA7426B0D60A81 /* PROJ_CONFIG_LIST */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C18D2B0477B530131D0AE8B /* PROJ_Debug */,
+				2576405B7A5E7166A8F97D71 /* PROJ_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FE2731BD57B18A61710FADA /* APP_CONFIG_LIST */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				753EE9967FB626F8D493CFD7 /* APP_Debug */,
+				30FE79FEE89AE58799512516 /* APP_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2623B63FA43A0763974E28D1 /* EXT_CONFIG_LIST */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44267F12006D299660C2078A /* EXT_Debug */,
+				CE3348A7EA592EDC09F767B7 /* EXT_Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+	};
+	rootObject = D1FB402F1269BA7396DCA9CB /* PROJECT */;
+}
